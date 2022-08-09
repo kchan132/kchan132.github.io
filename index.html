@@ -11,12 +11,13 @@
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <!-- My CSS stylesheet -->
     <link href="./css/style.css" rel="stylesheet" />
 
-    <!-- Popper for dropdown menu -->
+    <!-- Popper for Bootstrap dropdown menu -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
@@ -31,32 +32,41 @@
 
 <body>
 
+    <!-- Use 95% screen width but no more than 1024 pixels -->
     <div class="main">
 
+        <!-- Header -->
         <div class="container-fluid p-5 text-white text-center palette1">
             <h1>Ka Man Chan's Page</h1>
             <p>WEB222 Final Assessment – Summer 2022</p>
         </div>
 
+        <!-- My Photo and Resume -->
         <div class="container p-5 palette0 text-center">
-
             <img src="./image/photo.jpg" class="avatar" />
             <h3 class="text1">Ka Man Chan</h3>
             <p class="text1">Risk Manager</p>
             <div style="margin: auto;">
+                
+                <!-- The download attribute let browser to download instead of opening the PDF in the same tab -->
                 <a class="btn palette1 text-white pill m-1" href="resume.pdf" role="button" download="resume.pdf">
                     <i class="bi bi-download"></i>
                     Download
                 </a>
+                
+                <!-- Link to the bookmark (by ID) of the Contact Me section -->
                 <a class="btn palette1 text-white pill m-1" href="#contact" role="button">
                     Contact Me
                 </a>
             </div>
         </div>
 
+        <!-- About Me -->
         <div class="container p-5 palette2">
             <h2 class="text-white">About Me</h2>
             <div class="container p-5 mt-5 shadow palette0 text1">
+                
+                <!-- Show two columns if space allows, otherwise single column (i.e. Responsive) -->
                 <div class="row">
                     <div class="col-sm">
                         <h5>About Me and Academic Honesty</h5>
@@ -66,11 +76,11 @@
                             source (including web sites) except for the information supplied by the WEB222 instructors
                             and / or made available in this assessment for my use. I also declare that no part of this
                             assignment has been distributed to other students.</div>
-                        <p><b>Date:</b> August 8, 2022</p>
+                        <p><b>Date:</b> August 9, 2022</p>
                     </div>
                     <div class="col-sm">
                         <h5>Basic Information</h5>
-                        <table class="table table-responsive text1">
+                        <table class="table text1">
                             <tr>
                                 <th>EXPERIENCE:</th>
                                 <td>Over 10 Years</td>
@@ -102,6 +112,7 @@
 
         </div>
 
+        <!-- Education -->
         <div class="container p-5 palette0 text1">
             <h2>Education</h2>
             <div class="card shadow mt-5">
@@ -143,10 +154,13 @@
             </div>
         </div>
 
+        <!-- Contact Me -->
         <div class="container p-5 palette4 text-white">
             <h2 id="contact" class="text-white">Contact Me</h2>
 
+            <!-- Send to server with HTTP POST request, after HTML validation -->
             <form action="https://httpbin.org/post" method="post">
+
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
                     <input type="text" name="name" id="name" class="form-control" required />
@@ -168,6 +182,9 @@
                 <div class="mb-3">
                     <label for="city" class="form-label">Province &amp; City</label>
                     <div class="input-group mb-3">
+
+                        <!-- Dropdown button with 13 provinces and territories -->
+                        <!-- This is the additional input control as required -->
                         <div class="input-group-prepend dropdown">
                             <button type="button" class="btn btn-outline-secondary dropdown-toggle"
                                 data-bs-toggle="dropdown" id="provinceDropdown">Ontario</button>
@@ -175,6 +192,8 @@
                             </div>
                         </div>
                         <input type="text" name="city" id="city" list="cities" class="form-control" required />
+                        
+                        <!-- Autocomplete of cities, based on the province selected -->
                         <datalist id="cities"></datalist>
                     </div>
                     <div id="cityHelp" class="form-text text1">Select a province from dropdown menu and a list of cities in
@@ -183,14 +202,19 @@
 
                 <div class="mb-3">
                     <label for="city" class="form-label">Postal Code</label>
+                    
+                    <!-- Must match RegEx pattern -->
                     <input type="text" maxlength="7" name="postal" id="postal" list="prefixes" class="form-control"
                         placeholder="A1B 2C3"
                         pattern="^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$" required />
+                    
+                        <!-- Autocomplete of postal code prefixes, based on the city selected -->
                     <datalist id="prefixes"></datalist>
                     <div id="postalHelp" class="form-text text1">Auto conversion to uppercase. Must be valid Canada postal
                         code format e.g. A1B2C3 or A1B 2C3</div>
                 </div>
 
+                <!-- Radio buttons for message type -->
                 <p>Message Type</p>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="messageType" value="question" id="msg1">
@@ -221,11 +245,13 @@
                     <textarea name="messageText" id="messageText" class="form-control" rows="5" required></textarea>
                 </div>
 
+                <!-- Do not submit the form if any input field fails HTML validation -->
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <button type="reset" class="btn btn-secondary">Clear</button>
             </form>
         </div>
 
+        <!-- Footer with social media links -->
         <footer class="container-fluid p-5 text-white text-center palette5">
             <p class="text1">&copy; 2022 Ka Man Chan</p>
             <a href="https://github.com/kchan132" class="btn"><i class="bi bi-github bigIcon text1"></i></a>

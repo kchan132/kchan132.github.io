@@ -1,42 +1,48 @@
+/* Centering and capitalizing headers */
 h2, h3, h4, h5 {
     text-align: center;
     text-transform: uppercase;
 }
 
+/* Round image for avatar */
 .avatar {
-    /* Round image for avatar */ 
     border-radius: 50%;
 }
 
-.main {
-    /* Center */
-    margin: auto;    
+/* Use 95% screen width but no more than 1024 pixels */
+.main {    
+    margin: auto; /* Center */
     width: 95%;
     max-width: 1024px;
     box-shadow: 0 0 10px 8px #999;
 }
 
+/* Shadow */
 .shadow {
     box-shadow: 0 0 10px 8px #999;
 }
 
+/* Hide input */
 .hidden {
     display: none;
 }
 
+/* Justifying text */
 .text-justify {
     text-align: justify;
 }
 
+/* Pill-shaped button */
 .pill {
     border-radius: 24px;
 }
 
+/* Bigger social media icons */
 .bigIcon {
     font-size: 2rem;
 }
 
-/* Generated color palette */
+/* Generated color palette for background and text */
 .palette0 {
     background-color: #FFFFFF;
 }

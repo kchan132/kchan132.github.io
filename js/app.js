@@ -72,7 +72,7 @@ const updatePostal = () => {
 
 // Hide and unhide the rate input field and toggle the required attribute
 const updateMessage = (event) => {
-    const rate = document.getElementById("rate");
+    const rate = document.getElementById("rateGroup");
     if (event.target.value === "hiring") {        
         rate.setAttribute("required", true)
         rate.classList.remove("hidden");
@@ -98,6 +98,7 @@ window.onload = () => {
         flag.setAttribute("src", `./image/${province.code}.png`);
         flag.setAttribute("width", "32");
         flag.classList.add("mx-2");
+        // https://getbootstrap.com/docs/5.0/components/dropdowns/
         item.setAttribute("class", "dropdown-item");
         item.appendChild(flag);
         item.appendChild(document.createTextNode(province.name));

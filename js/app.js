@@ -17,7 +17,8 @@
 const { provinces, cities } = window;
 
 // Resolving province name "Ontario" to code "ON"
-const getCodeByProvince = name => provinces.filter(province => province.name === name)[0].code;
+// function name: getCodeByProvince, argument: name 
+const getCodeByProvince = name => provinces.find(province => province.name === name).code;
 
 // Event listener to update city autocomplete list upon province change
 const onProvinceClick = event => provinceChange(event.target.innerText);
@@ -26,7 +27,7 @@ const onProvinceClick = event => provinceChange(event.target.innerText);
 const onPostalChange = event => event.target.value = event.target.value.toLocaleUpperCase();
 
 // Update city autocomplete list based on province name
-const provinceChange = (name) => {
+const provinceChange = name => {
     const code = getCodeByProvince(name);    
     const provinceDropdown = document.getElementById("provinceDropdown");
     const cityList = document.getElementById("cities");

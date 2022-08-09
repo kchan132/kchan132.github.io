@@ -1,0 +1,66 @@
+h2, h3, h4, h5 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.avatar {
+    /* Round image for avatar */ 
+    border-radius: 50%;
+}
+
+.main {
+    /* Center */
+    margin: auto;    
+    width: 95%;
+    max-width: 1024px;
+    box-shadow: 0 0 10px 8px #999;
+}
+
+.shadow {
+    box-shadow: 0 0 10px 8px #999;
+}
+
+.hidden {
+    display: none;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.bigIcon {
+    font-size: 2rem;
+}
+
+/* Generated color palette */
+.palette0 {
+    background-color: #FFFFFF;
+}
+
+.palette1 {
+    background-color: #FB6F92;
+}
+
+.palette2 {
+    background-color: #FF8FAB;
+}
+
+.palette3 {
+    background-color: #FFB3C6;
+}
+
+.palette4 {
+    background-color: #FFC2D1;
+}
+
+.palette5 {
+    background-color: #FFE5EC;
+}
+
+.text0 {
+    color: #FFFFFF;
+}
+
+.text1 {
+    color: #FB6F92;
+}

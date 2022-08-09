@@ -1,5 +1,223 @@
-<html>
-    <body>
-        Web222
+<!doctype html>
+<html lang="en">        <head>
+        <title>💗 Web222 - Ka Man Chan 💗</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap 5 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+        <!-- My CSS stylesheet -->
+        <link href="./css/style.css" rel="stylesheet" />
+
+        <!-- Popper for dropdown menu -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- Province and City data -->
+        <script src="./js/cities.js"></script>
+        <script src="./js/provinces.js"></script>
+
+        <!-- My JavaScript code -->
+        <script src="./js/app.js"></script>
+    </head>
+    <body>        
+
+        <div class="main">
+
+            <div class="container-fluid p-5 text-white text-center palette1">
+                <h1>Ka Man Chan's Page</h1>
+                <p>WEB222 Final Assessment – Summer 2022</p> 
+            </div>            
+
+            <div class="container p-5 palette0 text-center">
+                
+                <img src="./image/photo.jpg" class="avatar" />
+                <h3 class="text1">Ka Man Chan</h3>
+                <p class="text1">Risk Manager</p>
+                <div style="margin: auto;">
+                    <a class="btn btn-primary" href="resume.pdf" role="button" download="resume.pdf">
+                        <i class="bi bi-download"></i>
+                        Download
+                    </a>
+                    <a class="btn btn-primary" href="#contact" role="button">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="container p-5 palette2">
+                <h2 class="text-white">About Me</h2>
+                <div class="container p-5 shadow palette0 text1">
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5>About Me and Academic Honesty</h5>
+                            <div class="text-justify">
+                                I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy. No part of this assessment has been copied manually or electronically from any other source (including web sites) except for the information supplied by the WEB222 instructors and / or made available in this assessment for my use. I also declare that no part of this assignment has been distributed to other students.</div>
+                            <p><b>Date:</b> August 8, 2022</p>
+                        </div>
+                        <div class="col-sm">
+                            <h5>Basic Information</h5>
+                                <table class="table text1">
+                                    <tr>
+                                        <th>EXPERIENCE:</th>
+                                        <td>Over 10 Years</td>
+                                    </tr>
+                                    <tr>
+                                        <th>EMAIL:</th>
+                                        <td><a href="mailto:kchan132@myseneca.ca">kchan132@myseneca.ca</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>LANGUAGE:</th>
+                                        <td>English, Cantonese, Putonghua</td>
+                                    </tr>
+                                    <tr>
+                                        <th>CLASS SECTION:</th>
+                                        <td>ZAA</td>
+                                    </tr>
+                                    <tr>
+                                        <th>STUDENT ID:</th>
+                                        <td>160678215</td>
+                                    </tr>
+                                    <tr>
+                                        <th>INSTRUCTOR:</th>
+                                        <td>Dr. Muath Alzghool</td>
+                                    </tr>                                    
+                                </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container p-5 palette0">
+                <h2>Education</h2>
+                <div class="card shadow">
+                    <div class="row">
+                        <div class="card-header col-4 palette1">
+                            <p class="text-white text-center">2022 - 2023 (Expected)</p>
+                            <h3 class="text-white">SENECA</h3>
+                        </div>                    
+                        <div class="card-body col-8">
+                            <h6 class="card-title">Seneca College</h6>
+                            <p class="card-text">Diploma in Computer Programming</p>
+                        </div>
+                    </div>                    
+                </div>
+                <p></p>
+                <div class="card shadow">
+                    <div class="row">
+                        <div class="card-header col-4 palette1">
+                            <p class="text-white text-center">2007 - 2008</p>
+                            <h3 class="text-white">CUHK</h3>
+                        </div>
+                        <div class="card-body col-8">
+                            <h6 class="card-title">The Chinese University of Hong Kong</h6>
+                            <p class="card-text">Postgraduate Diploma in Professional Accountancy</p>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="card shadow">
+                    <div class="row">
+                        <div class="card-header col-4 palette1">
+                            <p class="text-white text-center">2001 - 2005</p>
+                            <h3 class="text-white">HKUST</h3>
+                        </div>
+                        <div class="card-body col-8">
+                            <h6 class="card-title">The Hong Kong University of 
+                                Science and Technology</h6>
+                            <p class="card-text">Bachelor of Science in Mathematics</p>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="container p-5 palette4">
+                <h2 id="contact" class="text-white">Contact Me</h2>                  
+                
+                <form action="https://httpbin.org/post" method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" required />    
+                        <div id="nameHelp" class="form-text">Must not be empty</div>
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="name" class="form-label">E-mail</label>
+                        <input type="email" name="email" id="name" class="form-control" required />
+                        <div id="emailHelp" class="form-text">Must be a valid email address</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" name="address" id="address" class="form-control" required />    
+                        <div id="addressHelp" class="form-text">Street number and street name</div>
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="city" class="form-label">Province &amp; City</label>
+                        <div class="input-group mb-3">                            
+                            <div class="input-group-prepend dropdown">
+                                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" id="provinceDropdown">Ontario</button>
+                                <div class="dropdown-menu" id="provinces">
+                                </div>
+                            </div>
+                            <input type="text" name="city" id="city" list="cities" class="form-control" required />
+                            <datalist id="cities"></datalist>                            
+                        </div>
+                        <div id="cityHelp" class="form-text">Select a province from dropdown menu and a list of cities in that province will be populated in the autocomplete input field</div>
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="city" class="form-label">Postal Code</label>
+                        <input type="text" maxlength="7" name="postal" id="postal" list="prefixes" class="form-control" placeholder="A1A 1A1"
+                            pattern="^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$" required />
+                        <datalist id="prefixes"></datalist>
+                        <div id="postalHelp" class="form-text">Auto conversion to uppercase. Must be valid Canada postal code format e.g. A1B2C3 or A1B 2C3</div>
+                    </div>
+        
+                    <p>Message Type</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="messageType" value="question" id="msg1">
+                        <label class="form-check-label" for="msg1">Question</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="messageType" value="comment" id="msg2">
+                        <label class="form-check-label" for="msg2">Comment</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="messageType" value="hiring" id="msg3" checked>
+                        <label class="form-check-label" for="msg3">Hiring</label>
+                    </div>
+                    <p></p>
+        
+                    <div class="mb-3" id="rate">
+                        <label for="rate" class="form-label">Hourly Rate</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="text" name="rate" class="form-control" min="15.5" placeholder="15.50" required/>
+                            <span class="input-group-text">per hour</span>
+                        </div>
+                        <div id="rateHelp" class="form-text">Minimum wage in Ontario is $15.5</div>
+                    </div>            
+        
+                    <div class="mb-3">
+                        <label for="messageText" class="form-label">Message</label>
+                        <textarea name="messageText" id="messageText" class="form-control" rows="5" required></textarea>
+                    </div>
+        
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                </form>
+            </div>
+
+            <footer class="container-fluid p-5 text-white text-center palette5">
+                <p class="text1">&copy; 2022 Ka Man Chan</p>
+                <a href="https://github.com/kchan132" class="btn"><i class="bi bi-github bigIcon text1"></i></a>
+                <a href="https://ca.linkedin.com/" class="btn"><i class="bi bi-linkedin bigIcon text1"></i></a>
+            </footer>
+        </div>
     </body>
 </html>

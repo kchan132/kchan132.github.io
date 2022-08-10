@@ -38,8 +38,7 @@
         <!-- Header -->
         <!-- https://getbootstrap.com/docs/5.0/layout/containers/ 
              https://getbootstrap.com/docs/5.0/utilities/spacing/
-             https://getbootstrap.com/docs/5.0/utilities/colors/
-        -->
+             https://getbootstrap.com/docs/5.0/utilities/colors/ -->
         <div class="container-fluid p-5 text-white text-center palette1">
             <h1>Ka Man Chan's Page</h1>
             <p>WEB222 Final Assessment – Summer 2022</p>
@@ -54,8 +53,7 @@
                 
                 <!-- The download attribute let browser to download instead of opening the PDF in the same tab -->
                 <!-- https://getbootstrap.com/docs/5.0/components/buttons/
-                     https://icons.getbootstrap.com/icons/download/
-                -->
+                     https://icons.getbootstrap.com/icons/download/ -->
                 <a class="btn btn-lg palette1 text-white pill m-1" href="resume.pdf" download="resume.pdf">
                     <i class="bi bi-download"></i> 
                     Download
@@ -75,7 +73,14 @@
                 
                 <!-- Show two columns if space allows, otherwise single column (i.e. Responsive) -->
                 <div class="row">
-                    <div class="col-lg"> <!-- without number: split equally -->
+                    <div class="col-lg">
+
+                        <!-- https://getbootstrap.com/docs/5.1/layout/breakpoints/
+                             https://getbootstrap.com/docs/5.1/layout/grid/ 
+                            
+                             If screen width is below 992 pixels, i.e. large breakpoint (lg),
+                             it starts to stack vertically.
+                             Without number after breakdown, columns share the same width. -->
                         <h5>About Me and Academic Honesty</h5>
                         <div class="text-justify">
                             I declare that my assessment is wholly my own work in accordance with Seneca Academic
@@ -87,34 +92,35 @@
                     </div>
                     <div class="col-lg">
                         <h5>Basic Information</h5>
-                        <div class="container-fluid">
-                            <div class="row mt-2">
-                                <div class="col-sm-5 table-header">EXPERIENCE:</div>
-                                <div class="col-sm-7">Over 10 Years</div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-sm-5 table-header">EMAIL:</div>
-                                <div class="col-sm-7">
-                                    <a href="mailto:kchan132@myseneca.ca" class="text1">kchan132@myseneca.ca</a>
-                                </div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-sm-5 table-header">LANGUAGE:</div>
-                                <div class="col-sm-7">English, Cantonese, Putonghua</div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-sm-5 table-header">CLASS SECTION:</div>
-                                <div class="col-sm-7">ZAA</div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-sm-5 table-header">STUDENT ID:</div>
-                                <div class="col-sm-7">160678215</div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-sm-5 table-header">INSTRUCTOR:</div>
-                                <div class="col-sm-7">Dr. Muath Alzghool</div>
-                            </div>                                                                                    
+
+                        <!-- If screen width is below 576 pixels, i.e. small breakpoint (sm),
+                             it starts to stack vertically. -->
+                        <div class="row mt-2">
+                            <div class="col-sm-5 table-header">EXPERIENCE:</div>
+                            <div class="col-sm-7">Over 10 Years</div>
                         </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-5 table-header">EMAIL:</div>
+                            <div class="col-sm-7">
+                                <a href="mailto:kchan132@myseneca.ca" class="text1">kchan132@myseneca.ca</a>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-5 table-header">LANGUAGE:</div>
+                            <div class="col-sm-7">English, Cantonese, Putonghua</div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-5 table-header">CLASS SECTION:</div>
+                            <div class="col-sm-7">ZAA</div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-5 table-header">STUDENT ID:</div>
+                            <div class="col-sm-7">160678215</div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-5 table-header">INSTRUCTOR:</div>
+                            <div class="col-sm-7">Dr. Muath Alzghool</div>
+                        </div>                                                                                    
                     </div>
                 </div>
             </div>
@@ -124,6 +130,7 @@
         <!-- Education -->
         <div class="container-fluid p-5 palette0 text1">
             <h2>Education</h2>
+
             <!-- https://getbootstrap.com/docs/5.0/components/card/ -->
             <div class="card shadow mt-5">
                 <div class="row">
@@ -172,6 +179,7 @@
             <form action="https://httpbin.org/post" method="post">
 
                 <div class="mb-3">
+
                     <!-- https://getbootstrap.com/docs/5.0/forms/form-control/ -->
                     <label for="name" class="form-label">Name</label>
                     <input type="text" name="name" id="name" class="form-control" required />
@@ -194,8 +202,8 @@
                     <label for="city" class="form-label">Province &amp; City</label>
                     <div class="input-group mb-3">
 
-                        <!-- Dropdown button with 13 provinces and territories -->
-                        <!-- This is the additional input control as required -->
+                        <!-- Dropdown button with 13 provinces and territories
+                             This is the additional input control as required -->
                         <div class="input-group-prepend dropdown">
                             <button type="button" class="btn btn-outline-secondary dropdown-toggle"
                                 data-bs-toggle="dropdown" id="provinceDropdown">Ontario</button>
@@ -257,6 +265,7 @@
                 </div>
                 
                 <div class="text-center">
+
                     <!-- Do not submit the form if any input field fails HTML validation -->
                     <button type="submit" class="btn btn-lg palette1 pill text-white m-1">Submit</button>
                     <button type="reset" class="btn btn-lg palette2 pill text-white m-1">Clear</button>
